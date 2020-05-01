@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>类与继承 | Armito&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/Blog/imgs/title.ico">
+    <link rel="stylesheet" href="/Blog/css/main.css">
+    <link rel="stylesheet" href="/Blog/css/driver.min.css">
+    <script charset="utf-8" src="/Blog/js/driver.min.js"></script>
+    <script charset="utf-8" src="/Blog/js/guide.js"></script>
+    <meta name="description" content="">
+    <link rel="preload" href="/Blog/assets/css/0.styles.719127cc.css" as="style"><link rel="preload" href="/Blog/assets/js/app.82243a99.js" as="script"><link rel="preload" href="/Blog/assets/js/2.0fa35c7d.js" as="script"><link rel="preload" href="/Blog/assets/js/24.3b4123da.js" as="script"><link rel="prefetch" href="/Blog/assets/js/10.1737b7ce.js"><link rel="prefetch" href="/Blog/assets/js/11.74213623.js"><link rel="prefetch" href="/Blog/assets/js/12.6bfcad3c.js"><link rel="prefetch" href="/Blog/assets/js/13.0e4b91d1.js"><link rel="prefetch" href="/Blog/assets/js/14.6c23b394.js"><link rel="prefetch" href="/Blog/assets/js/15.d2363402.js"><link rel="prefetch" href="/Blog/assets/js/16.3f52be87.js"><link rel="prefetch" href="/Blog/assets/js/17.8980b64a.js"><link rel="prefetch" href="/Blog/assets/js/18.3dd1dfc3.js"><link rel="prefetch" href="/Blog/assets/js/19.915b37e7.js"><link rel="prefetch" href="/Blog/assets/js/20.fa096af3.js"><link rel="prefetch" href="/Blog/assets/js/21.277216b5.js"><link rel="prefetch" href="/Blog/assets/js/22.de055466.js"><link rel="prefetch" href="/Blog/assets/js/23.6636856c.js"><link rel="prefetch" href="/Blog/assets/js/25.ed916ab4.js"><link rel="prefetch" href="/Blog/assets/js/26.625efbf5.js"><link rel="prefetch" href="/Blog/assets/js/27.a299f10a.js"><link rel="prefetch" href="/Blog/assets/js/28.a99fb303.js"><link rel="prefetch" href="/Blog/assets/js/29.a444ce85.js"><link rel="prefetch" href="/Blog/assets/js/3.5f53cf13.js"><link rel="prefetch" href="/Blog/assets/js/30.e8b324f8.js"><link rel="prefetch" href="/Blog/assets/js/31.836e455b.js"><link rel="prefetch" href="/Blog/assets/js/32.876f42a2.js"><link rel="prefetch" href="/Blog/assets/js/33.474abfc9.js"><link rel="prefetch" href="/Blog/assets/js/34.c4eba9bc.js"><link rel="prefetch" href="/Blog/assets/js/35.229c3ef3.js"><link rel="prefetch" href="/Blog/assets/js/36.66159c53.js"><link rel="prefetch" href="/Blog/assets/js/37.cf073127.js"><link rel="prefetch" href="/Blog/assets/js/38.9be18cf7.js"><link rel="prefetch" href="/Blog/assets/js/39.b1dfffab.js"><link rel="prefetch" href="/Blog/assets/js/4.217b33ff.js"><link rel="prefetch" href="/Blog/assets/js/40.ccb2caf5.js"><link rel="prefetch" href="/Blog/assets/js/5.ebbabb0c.js"><link rel="prefetch" href="/Blog/assets/js/6.7ce0885e.js"><link rel="prefetch" href="/Blog/assets/js/7.bff8a0a3.js"><link rel="prefetch" href="/Blog/assets/js/8.19aae8ac.js"><link rel="prefetch" href="/Blog/assets/js/9.66936ea3.js">
+    <link rel="stylesheet" href="/Blog/assets/css/0.styles.719127cc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Blog/" class="home-link router-link-active"><!----> <span class="site-name">Armito's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Blog/net/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/Blog/js/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/Blog/dart/" class="nav-link">
+  Dart
+</a></div><div class="nav-item"><a href="/Blog/tool/" class="nav-link">
+  工具
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Blog/net/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/Blog/js/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/Blog/dart/" class="nav-link">
+  Dart
+</a></div><div class="nav-item"><a href="/Blog/tool/" class="nav-link">
+  工具
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Javascript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>原生</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog/js/native/JS-1-数据类型.html" class="sidebar-link">数据类型</a></li><li><a href="/Blog/js/native/JS-2-类与继承.html" class="active sidebar-link">类与继承</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Blog/js/native/JS-2-类与继承.html#一-类" class="sidebar-link">一. 类</a></li><li class="sidebar-sub-header"><a href="/Blog/js/native/JS-2-类与继承.html#二-继承" class="sidebar-link">二. 继承</a></li></ul></li><li><a href="/Blog/js/native/JS-3-内置对象属性和方法.html" class="sidebar-link">内置对象属性和方法</a></li><li><a href="/Blog/js/native/JS-4-作用域和闭包.html" class="sidebar-link">作用域与闭包</a></li><li><a href="/Blog/js/native/JS-5-DOM1.html" class="sidebar-link">DOM1</a></li><li><a href="/Blog/js/native/JS-7-DOM操作.html" class="sidebar-link">DOM 操作</a></li><li><a href="/Blog/js/native/JS-8-事件与事件循环.html" class="sidebar-link">事件</a></li><li><a href="/Blog/js/native/JS-9-异步编程.html" class="sidebar-link">异步编程</a></li><li><a href="/Blog/js/native/JS-10-HTTP超文本传输协议.html" class="sidebar-link">HTTP</a></li><li><a href="/Blog/js/native/JS-11-JSON.html" class="sidebar-link">JSON</a></li><li><a href="/Blog/js/native/JS-12-跨域数据传输.html" class="sidebar-link">跨域数据传输</a></li><li><a href="/Blog/js/native/JS-13-Proxy和Reflect.html" class="sidebar-link">Proxy &amp; Reflect</a></li><li><a href="/Blog/js/native/JS-15-H5的video.html" class="sidebar-link">video</a></li><li><a href="/Blog/js/native/JS-16-文件上传.html" class="sidebar-link">文件上传</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>框架</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-2"><p class="sidebar-heading open"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog/js/frame/react/React.html" class="sidebar-link">React/小程序/Vue对比</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-2"><p class="sidebar-heading"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog/js/frame/vue/Vue-1-指令和修饰符.html" class="sidebar-link">Vue 指令</a></li><li><a href="/Blog/js/frame/vue/Vue-2-实例特性.html" class="sidebar-link">实例特性</a></li><li><a href="/Blog/js/frame/vue/Vue-3-组件.html" class="sidebar-link">组件</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-2"><p class="sidebar-heading"><span>Angular</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog/js/frame/ng/Angular-1.html" class="sidebar-link">Angular 基本语法</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>工具</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-2"><p class="sidebar-heading open"><span>Typescript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog/js/tool/ts/TS-1-接口.html" class="sidebar-link">接口</a></li><li><a href="/Blog/js/tool/ts/TS-2-泛型.html" class="sidebar-link">泛型</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-2"><p class="sidebar-heading"><span>Webpack</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog/js/tool/webpack/Webpack.html" class="sidebar-link">Webpack</a></li></ul></section></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="类与继承"><a href="#类与继承" class="header-anchor">#</a> 类与继承</h1> <h2 id="一-类"><a href="#一-类" class="header-anchor">#</a> 一. 类</h2> <ul><li>类的私有成员</li></ul> <blockquote><p>Javascript 暂无私有属性和方法</p></blockquote> <h2 id="二-继承"><a href="#二-继承" class="header-anchor">#</a> 二. 继承</h2> <h3 id="_2-1-类的实例部分和静态部分"><a href="#_2-1-类的实例部分和静态部分" class="header-anchor">#</a> 2.1 类的实例部分和静态部分</h3> <h4 id="_2-1-1-实例部分属性和方法"><a href="#_2-1-1-实例部分属性和方法" class="header-anchor">#</a> 2.1.1 实例部分属性和方法</h4> <blockquote><p>可被子类和实例继承</p></blockquote> <ul><li>通用写法: 属性写在 constructor 函数中, 方法写在类中</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">F</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>attr <span class="token operator">=</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">testFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'This is testFunc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>其他写法: 实例属性也可以直接写在类中</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">F</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    x <span class="token operator">=</span> <span class="token string">'233'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="_2-1-2-静态部分属性和方法"><a href="#_2-1-2-静态部分属性和方法" class="header-anchor">#</a> 2.1.2 静态部分属性和方法</h4> <blockquote><p>可被子类继承, 不能被实例继承</p></blockquote> <ul><li>原写法: 在类的外部挂载</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">F</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+<span class="token constant">F</span><span class="token punctuation">.</span>prop <span class="token operator">=</span> <span class="token string">'233'</span><span class="token punctuation">;</span>
+<span class="token constant">F</span><span class="token punctuation">.</span><span class="token function-variable function">testFunc</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'This is testFunction'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>新写法: 添加 static 关键字</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">F</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>prop<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">F</span><span class="token punctuation">.</span>prop<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '233'</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">static</span> prop <span class="token operator">=</span> <span class="token string">'233'</span>
+    <span class="token keyword">static</span> <span class="token function">testFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'This is testFunction'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-2-super-关键字"><a href="#_2-2-super-关键字" class="header-anchor">#</a> 2.2 super 关键字</h3> <ul><li>作为函数的 super</li></ul> <blockquote><p>super() 作为代表调用父类的构造函数, 只用在<strong>子类的构造函数</strong>之中，用在其他地方就会报错</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">S</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 相当于 Parent.prototype.constructor.call(this)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>作为对象的 super</li></ul> <blockquote><p>super 在<strong>实例方法</strong>中指向父类的原型对象, 在<strong>静态方法</strong>中指向父类</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">static</span> <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span><span class="token string">'static'</span><span class="token punctuation">,</span> msg<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+    <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span><span class="token string">'instance'</span> <span class="token punctuation">,</span> msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">static</span> <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">myMethod</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 相当于 Parent</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">myMethod</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 相当于 Parent.prototype</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Child<span class="token punctuation">.</span><span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// static 1</span>
+<span class="token keyword">let</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">;</span>
+child<span class="token punctuation">.</span><span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// instance 2</span>
+</code></pre></div><blockquote><p>使用 super 的时候，必须显式指定是作为函数还是作为对象使用，否则会报错</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span> 
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">extends</span> <span class="token class-name">A</span> <span class="token punctuation">{</span> 
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">super</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Blog/js/native/JS-1-数据类型.html" class="prev">
+        数据类型
+      </a></span> <span class="next"><a href="/Blog/js/native/JS-3-内置对象属性和方法.html">
+        内置对象属性和方法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Blog/assets/js/app.82243a99.js" defer></script><script src="/Blog/assets/js/2.0fa35c7d.js" defer></script><script src="/Blog/assets/js/24.3b4123da.js" defer></script>
+  </body>
+</html>

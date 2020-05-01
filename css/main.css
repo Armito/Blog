@@ -1,0 +1,35 @@
+.home .feature h2 {
+  text-align: center;
+}
+
+.home-link span::before {
+  display: inline-block;
+  content: '';
+  width: 1.2em;
+  height: 1.2em;
+  background: url(../imgs/star.png), no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+}
+
+.guide_button {
+  background-color: #00ae86;
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  margin: 20px 20px 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+/* 修改 fixed 元素内容不高亮的 bug */
+div#driver-highlighted-element-stage,
+div#driver-page-overlay {
+  background: transparent !important;
+  outline: 5000px solid rgba(0, 0, 0, .75)
+}
